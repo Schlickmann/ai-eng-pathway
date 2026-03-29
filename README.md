@@ -12,6 +12,7 @@ This project is a static HTML application that helps you track progress across 6
 6. MLOps & Production
 
 Each phase includes:
+
 - Topic checkboxes
 - Curated learning resources
 - A hands-on project with milestones
@@ -91,12 +92,13 @@ This project can be deployed to Vercel as a static site with no build step.
 2. In Vercel, create a **New Project** and import the repository.
 3. Keep defaults:
    - Framework Preset: `Other`
-   - Build Command: *(empty)*
-   - Output Directory: *(empty)* or `.`
+   - Build Command: _(empty)_
+   - Output Directory: _(empty)_ or `.`
 4. Deploy.
 5. Open your Vercel URL (it should serve `index.html` at the root).
 
 Notes:
+
 - Keep the `sections/` folder in the deployed output, since `app.js` fetches `sections/phase-*.html`.
 - If needed, set the project root in Vercel to this folder if the repo contains multiple projects.
 
@@ -128,5 +130,4 @@ You can customize the roadmap by editing:
 
 ## License
 
-No license file is currently included.
-If you want this open-sourced, add a `LICENSE` file (for example, MIT).
+[MIT](LICENSE)
