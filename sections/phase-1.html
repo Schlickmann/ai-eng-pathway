@@ -1,0 +1,158 @@
+<!-- ══ PHASE 1: FOUNDATIONS ══ -->
+<div class="phase-card" id="phase-1">
+  <div class="phase-header" onclick="togglePhase(this)" role="button" tabindex="0" aria-expanded="true" onkeydown="handleHeaderKey(event, this)">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(0,200,200,0.12);color:var(--p1)">01</div>
+      <div class="phase-badge-label">
+        <div class="phase-num-tag">Phase 01 · 4–6 Weeks</div>
+        <div class="phase-name">Foundations</div>
+        <div class="phase-chips">
+          <span class="chip chip-time">🐍 Python</span>
+          <span class="chip chip-time">📐 Math</span>
+          <span class="chip chip-time">📊 Data</span>
+        </div>
+        <div class="phase-desc">Build the bedrock: Python fluency, essential math (linear algebra, stats, probability), and data manipulation skills. No AI without these.</div>
+      </div>
+    </div>
+    <div class="phase-header-right">
+      <div class="mini-ring-wrap">
+        <svg width="52" height="52" viewBox="0 0 52 52">
+          <circle class="mini-ring-bg" cx="26" cy="26" r="20.5"></circle>
+          <circle class="mini-ring-fill" id="ring-1" cx="26" cy="26" r="20.5" style="stroke:var(--p1);stroke-dasharray:128.8;stroke-dashoffset:128.8"></circle>
+        </svg>
+        <div class="mini-ring-text" id="pct-1" style="color:var(--p1)">0%</div>
+      </div>
+      <div class="caret">▾</div>
+    </div>
+  </div>
+  <div class="phase-body">
+    <div class="topics-col" style="--phase-clr: var(--p1)">
+      <div class="col-heading">Topics to Master</div>
+
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t1-1" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t1-1">Python Fundamentals</label>
+          <div class="topic-sub">Variables, loops, functions, OOP, error handling</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t1-2" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t1-2">NumPy & Pandas</label>
+          <div class="topic-sub">Arrays, DataFrames, data wrangling, groupby, merges</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t1-3" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t1-3">Linear Algebra Basics</label>
+          <div class="topic-sub">Vectors, matrices, dot products, eigenvalues</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t1-4" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t1-4">Statistics & Probability</label>
+          <div class="topic-sub">Distributions, mean/std, Bayes' theorem, hypothesis testing</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t1-5" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t1-5">Data Visualization</label>
+          <div class="topic-sub">Matplotlib, Seaborn, reading charts critically</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t1-6" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t1-6">Calculus Intuition</label>
+          <div class="topic-sub">Derivatives, chain rule, gradients — understand, not memorize</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-col">
+      <div class="resources-col">
+        <div class="col-heading">Resources</div>
+        <a class="resource-item" href="https://cs50.harvard.edu/python/" target="_blank">
+          <div class="res-icon" style="background:rgba(0,200,200,0.12)">🎓</div>
+          <div class="res-body">
+            <div class="res-name">CS50P – Python (Harvard)</div>
+            <div class="res-type">FREE COURSE · 15–20 hrs</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" target="_blank">
+          <div class="res-icon" style="background:rgba(0,200,200,0.12)">▶️</div>
+          <div class="res-body">
+            <div class="res-name">3Blue1Brown – Linear Algebra</div>
+            <div class="res-type">VIDEO SERIES · Visual & intuitive</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://www.khanacademy.org/math/statistics-probability" target="_blank">
+          <div class="res-icon" style="background:rgba(0,200,200,0.12)">📘</div>
+          <div class="res-body">
+            <div class="res-name">Khan Academy – Statistics</div>
+            <div class="res-type">FREE COURSE · Self-paced</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://numpy.org/learn/" target="_blank">
+          <div class="res-icon" style="background:rgba(0,200,200,0.12)">🔢</div>
+          <div class="res-body">
+            <div class="res-name">NumPy Official Tutorials</div>
+            <div class="res-type">DOCS · Hands-on exercises</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-col" style="--phase-clr: var(--p1)">
+        <div class="col-heading">Apply It</div>
+        <div class="project-card" id="proj-card-1">
+          <div class="proj-topbar">
+            <span class="proj-emoji">🚢</span>
+            <div class="proj-title-wrap">
+              <div class="proj-title">Exploratory Data Analysis (EDA)</div>
+              <div class="proj-tags">
+                <span class="proj-tag">pandas</span>
+                <span class="proj-tag">matplotlib</span>
+                <span class="proj-tag">statistics</span>
+                <span class="proj-tag">kaggle</span>
+              </div>
+            </div>
+            <button class="proj-done-btn" id="proj-btn-1" onclick="toggleProject(1)">Mark Built</button>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Pick a Kaggle dataset (Titanic or Airbnb listings). Clean it, run statistical analysis, and create 5 meaningful visualizations. Then write a short narrative with 3 real insights.</p>
+            <div>
+              <div class="proj-milestones-label">Milestones</div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m1-1" onchange="saveProgress()"><label class="milestone-text" for="m1-1">Load dataset, run <code style="font-size:10px;color:var(--accent)">.describe()</code> & null analysis</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m1-2" onchange="saveProgress()"><label class="milestone-text" for="m1-2">Clean: handle missing values, fix dtypes, drop duplicates</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m1-3" onchange="saveProgress()"><label class="milestone-text" for="m1-3">Create 5 visualizations (distributions, correlations, trends)</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m1-4" onchange="saveProgress()"><label class="milestone-text" for="m1-4">Write a 300-word story summarising 3 key insights</label></div>
+            </div>
+            <a class="proj-starter" href="https://www.kaggle.com/code/startupsci/titanic-data-science-solutions" target="_blank">
+              <span class="proj-starter-icon">📓</span>
+              <div class="proj-starter-text">
+                <div class="proj-starter-label">Starter Notebook</div>
+                <div class="proj-starter-name">Titanic – Kaggle Reference Solution</div>
+              </div>
+              <span class="proj-starter-arrow">→</span>
+            </a>
+            <div class="proj-callout proj-callout-portfolio">
+              <div class="callout-heading">💼 Portfolio tip</div>
+              <div class="callout-text">Show your visualisation choices and explain <em>why</em> you picked them. Interviewers want to see your data intuition, not just that you ran the code.</div>
+            </div>
+            <div class="proj-callout proj-callout-stretch">
+              <div class="callout-heading">⚡ Stretch goal</div>
+              <div class="callout-text">Rebuild the static charts as an interactive Streamlit or Plotly Dash app and deploy it on Hugging Face Spaces for free.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

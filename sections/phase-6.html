@@ -1,0 +1,156 @@
+<!-- ══ PHASE 6: MLOPS ══ -->
+<div class="phase-card" id="phase-6">
+  <div class="phase-header" onclick="togglePhase(this)" role="button" tabindex="0" aria-expanded="true" onkeydown="handleHeaderKey(event, this)">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(255,107,53,0.12);color:var(--p6)">06</div>
+      <div class="phase-badge-label">
+        <div class="phase-num-tag">Phase 06 · 4–6 Weeks</div>
+        <div class="phase-name">MLOps & Production</div>
+        <div class="phase-chips">
+          <span class="chip chip-time">🐳 Docker</span>
+          <span class="chip chip-time">📊 MLflow</span>
+          <span class="chip chip-time">🚀 Deploy</span>
+        </div>
+        <div class="phase-desc">Ship AI systems that actually work in the real world — robust, monitored, and maintainable. The difference between a demo and a product.</div>
+      </div>
+    </div>
+    <div class="phase-header-right">
+      <div class="mini-ring-wrap">
+        <svg width="52" height="52" viewBox="0 0 52 52">
+          <circle class="mini-ring-bg" cx="26" cy="26" r="20.5"></circle>
+          <circle class="mini-ring-fill" id="ring-6" cx="26" cy="26" r="20.5" style="stroke:var(--p6);stroke-dasharray:128.8;stroke-dashoffset:128.8"></circle>
+        </svg>
+        <div class="mini-ring-text" id="pct-6" style="color:var(--p6)">0%</div>
+      </div>
+      <div class="caret">▾</div>
+    </div>
+  </div>
+  <div class="phase-body">
+    <div class="topics-col" style="--phase-clr: var(--p6)">
+      <div class="col-heading">Topics to Master</div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t6-1" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t6-1">Model Serving with FastAPI</label>
+          <div class="topic-sub">REST APIs, async endpoints, request validation, Docker</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t6-2" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t6-2">Experiment Tracking</label>
+          <div class="topic-sub">MLflow, Weights & Biases — log params, metrics, artifacts</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t6-3" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t6-3">CI/CD for ML</label>
+          <div class="topic-sub">GitHub Actions, automated testing, model validation gates</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t6-4" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t6-4">Model Monitoring</label>
+          <div class="topic-sub">Data drift, model degradation, Evidently, Prometheus</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t6-5" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t6-5">Scaling & Cost Optimization</label>
+          <div class="topic-sub">Model quantization, batching, caching, GPU economics</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t6-6" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t6-6">AI Safety & Ethics</label>
+          <div class="topic-sub">Bias auditing, responsible AI, red-teaming, guardrails</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="resources-col">
+        <div class="col-heading">Resources</div>
+        <a class="resource-item" href="https://fullstackdeeplearning.com/" target="_blank">
+          <div class="res-icon" style="background:rgba(255,107,53,0.12)">🏗️</div>
+          <div class="res-body">
+            <div class="res-name">Full Stack Deep Learning</div>
+            <div class="res-type">FREE COURSE · Best MLOps course</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://madewithml.com/" target="_blank">
+          <div class="res-icon" style="background:rgba(255,107,53,0.12)">⚙️</div>
+          <div class="res-body">
+            <div class="res-name">Made With ML</div>
+            <div class="res-type">FREE · ML Engineering best practices</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://mlflow.org/docs/latest/index.html" target="_blank">
+          <div class="res-icon" style="background:rgba(255,107,53,0.12)">📊</div>
+          <div class="res-body">
+            <div class="res-name">MLflow Documentation</div>
+            <div class="res-type">DOCS · Experiment tracking</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://www.wandb.courses/" target="_blank">
+          <div class="res-icon" style="background:rgba(255,107,53,0.12)">📈</div>
+          <div class="res-body">
+            <div class="res-name">Weights & Biases Courses</div>
+            <div class="res-type">FREE COURSES · MLOps in practice</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-col" style="--phase-clr: var(--p6)">
+        <div class="col-heading">Apply It</div>
+        <div class="project-card" id="proj-card-6">
+          <div class="proj-topbar">
+            <span class="proj-emoji">🚀</span>
+            <div class="proj-title-wrap">
+              <div class="proj-title">Production ML System</div>
+              <div class="proj-tags">
+                <span class="proj-tag">fastapi</span>
+                <span class="proj-tag">docker</span>
+                <span class="proj-tag">github actions</span>
+                <span class="proj-tag">monitoring</span>
+              </div>
+            </div>
+            <button class="proj-done-btn" id="proj-btn-6" onclick="toggleProject(6)">Mark Built</button>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Take a model from Phase 2 or 3 and ship it properly: versioned, containerised, auto-deployed, and monitored. This is the gap between a notebook and a real system.</p>
+            <div>
+              <div class="proj-milestones-label">Milestones</div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m6-1" onchange="saveProgress()"><label class="milestone-text" for="m6-1">FastAPI endpoint with Pydantic input validation</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m6-2" onchange="saveProgress()"><label class="milestone-text" for="m6-2">Containerise with Docker, test locally end-to-end</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m6-3" onchange="saveProgress()"><label class="milestone-text" for="m6-3">GitHub Actions CI/CD: lint → test → build → deploy</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m6-4" onchange="saveProgress()"><label class="milestone-text" for="m6-4">Add data drift monitoring with Evidently or W&B</label></div>
+            </div>
+            <a class="proj-starter" href="https://github.com/GokuMohandas/mlops-course" target="_blank">
+              <span class="proj-starter-icon">⚙️</span>
+              <div class="proj-starter-text">
+                <div class="proj-starter-label">Starter Template</div>
+                <div class="proj-starter-name">Made With ML – MLOps Course Repo</div>
+              </div>
+              <span class="proj-starter-arrow">→</span>
+            </a>
+            <div class="proj-callout proj-callout-portfolio">
+              <div class="callout-heading">💼 Portfolio tip</div>
+              <div class="callout-text">Add a simple architecture diagram to your README. Even a hand-drawn one shows you think in systems — that's the core skill of an ML engineer vs. a data scientist.</div>
+            </div>
+            <div class="proj-callout proj-callout-stretch">
+              <div class="callout-heading">⚡ Stretch goal</div>
+              <div class="callout-text">Wire up an automatic retraining trigger when drift crosses a threshold. This is what separates a deployed model from a maintained one.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

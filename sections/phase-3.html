@@ -1,0 +1,156 @@
+<!-- ══ PHASE 3: DEEP LEARNING ══ -->
+<div class="phase-card" id="phase-3">
+  <div class="phase-header" onclick="togglePhase(this)" role="button" tabindex="0" aria-expanded="true" onkeydown="handleHeaderKey(event, this)">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(245,158,11,0.12);color:var(--p3)">03</div>
+      <div class="phase-badge-label">
+        <div class="phase-num-tag">Phase 03 · 8–10 Weeks</div>
+        <div class="phase-name">Deep Learning</div>
+        <div class="phase-chips">
+          <span class="chip chip-time">🔥 PyTorch</span>
+          <span class="chip chip-time">🧠 Neural Nets</span>
+          <span class="chip chip-time">👁 CNNs</span>
+        </div>
+        <div class="phase-desc">Understand neural networks from first principles. Train your own models for vision and sequence tasks. This is where the magic starts.</div>
+      </div>
+    </div>
+    <div class="phase-header-right">
+      <div class="mini-ring-wrap">
+        <svg width="52" height="52" viewBox="0 0 52 52">
+          <circle class="mini-ring-bg" cx="26" cy="26" r="20.5"></circle>
+          <circle class="mini-ring-fill" id="ring-3" cx="26" cy="26" r="20.5" style="stroke:var(--p3);stroke-dasharray:128.8;stroke-dashoffset:128.8"></circle>
+        </svg>
+        <div class="mini-ring-text" id="pct-3" style="color:var(--p3)">0%</div>
+      </div>
+      <div class="caret">▾</div>
+    </div>
+  </div>
+  <div class="phase-body">
+    <div class="topics-col" style="--phase-clr: var(--p3)">
+      <div class="col-heading">Topics to Master</div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t3-1" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t3-1">Neural Networks from Scratch</label>
+          <div class="topic-sub">Perceptrons, activation functions, forward pass</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t3-2" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t3-2">Backpropagation & Optimizers</label>
+          <div class="topic-sub">Gradient descent, Adam, SGD, learning rate schedules</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t3-3" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t3-3">PyTorch Fundamentals</label>
+          <div class="topic-sub">Tensors, autograd, datasets, training loops</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t3-4" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t3-4">CNNs (Computer Vision)</label>
+          <div class="topic-sub">Conv layers, pooling, ResNet architecture</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t3-5" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t3-5">RNNs & Sequence Models</label>
+          <div class="topic-sub">RNN, LSTM, GRU — understand vanishing gradients</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t3-6" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t3-6">Transfer Learning</label>
+          <div class="topic-sub">Pretrained models, fine-tuning, feature extraction</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="resources-col">
+        <div class="col-heading">Resources</div>
+        <a class="resource-item" href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ" target="_blank">
+          <div class="res-icon" style="background:rgba(245,158,11,0.12)">🔥</div>
+          <div class="res-body">
+            <div class="res-name">Karpathy – Neural Nets: Zero to Hero</div>
+            <div class="res-type">FREE VIDEOS · Build GPT from scratch</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank">
+          <div class="res-icon" style="background:rgba(245,158,11,0.12)">▶️</div>
+          <div class="res-body">
+            <div class="res-name">3Blue1Brown – Neural Networks</div>
+            <div class="res-type">VIDEO SERIES · Best visual intuition</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://www.coursera.org/specializations/deep-learning" target="_blank">
+          <div class="res-icon" style="background:rgba(245,158,11,0.12)">🎓</div>
+          <div class="res-body">
+            <div class="res-name">Deep Learning Specialization – Andrew Ng</div>
+            <div class="res-type">COURSERA · 5 courses comprehensive</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://pytorch.org/tutorials/" target="_blank">
+          <div class="res-icon" style="background:rgba(245,158,11,0.12)">📖</div>
+          <div class="res-body">
+            <div class="res-name">PyTorch Official Tutorials</div>
+            <div class="res-type">DOCS · Hands-on with real code</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-col" style="--phase-clr: var(--p3)">
+        <div class="col-heading">Apply It</div>
+        <div class="project-card" id="proj-card-3">
+          <div class="proj-topbar">
+            <span class="proj-emoji">🖼️</span>
+            <div class="proj-title-wrap">
+              <div class="proj-title">Image Classifier from Scratch</div>
+              <div class="proj-tags">
+                <span class="proj-tag">pytorch</span>
+                <span class="proj-tag">CNN</span>
+                <span class="proj-tag">transfer learning</span>
+                <span class="proj-tag">wandb</span>
+              </div>
+            </div>
+            <button class="proj-done-btn" id="proj-btn-3" onclick="toggleProject(3)">Mark Built</button>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Train a CNN on CIFAR-10 manually in PyTorch, then fine-tune a pretrained ResNet on the same task. Compare training curves and final accuracy to see transfer learning's real impact.</p>
+            <div>
+              <div class="proj-milestones-label">Milestones</div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m3-1" onchange="saveProgress()"><label class="milestone-text" for="m3-1">Custom training loop with loss & accuracy logging</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m3-2" onchange="saveProgress()"><label class="milestone-text" for="m3-2">Add dropout, batch norm & data augmentation</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m3-3" onchange="saveProgress()"><label class="milestone-text" for="m3-3">Fine-tune pretrained ResNet18, compare with from-scratch</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m3-4" onchange="saveProgress()"><label class="milestone-text" for="m3-4">Log experiments to W&B and compare runs side-by-side</label></div>
+            </div>
+            <a class="proj-starter" href="https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html" target="_blank">
+              <span class="proj-starter-icon">🔥</span>
+              <div class="proj-starter-text">
+                <div class="proj-starter-label">Starter Tutorial</div>
+                <div class="proj-starter-name">PyTorch CIFAR-10 Official Tutorial</div>
+              </div>
+              <span class="proj-starter-arrow">→</span>
+            </a>
+            <div class="proj-callout proj-callout-portfolio">
+              <div class="callout-heading">💼 Portfolio tip</div>
+              <div class="callout-text">Include your W&B training curves. A side-by-side comparison of scratch vs. transfer learning shows you understand the tradeoffs, not just the API.</div>
+            </div>
+            <div class="proj-callout proj-callout-stretch">
+              <div class="callout-heading">⚡ Stretch goal</div>
+              <div class="callout-text">Wrap the model in a Gradio app where users can upload their own images and get predictions. Deploy free on Hugging Face Spaces.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

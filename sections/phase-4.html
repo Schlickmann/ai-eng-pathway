@@ -1,0 +1,156 @@
+<!-- ══ PHASE 4: LLMs ══ -->
+<div class="phase-card" id="phase-4">
+  <div class="phase-header" onclick="togglePhase(this)" role="button" tabindex="0" aria-expanded="true" onkeydown="handleHeaderKey(event, this)">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(232,70,142,0.12);color:var(--p4)">04</div>
+      <div class="phase-badge-label">
+        <div class="phase-num-tag">Phase 04 · 6–8 Weeks</div>
+        <div class="phase-name">LLMs & Generative AI</div>
+        <div class="phase-chips">
+          <span class="chip chip-time">🤗 HuggingFace</span>
+          <span class="chip chip-time">✍️ Prompting</span>
+          <span class="chip chip-time">🔧 Fine-tuning</span>
+        </div>
+        <div class="phase-desc">Understand how large language models work under the hood — from transformers to tokenization to fine-tuning on custom data.</div>
+      </div>
+    </div>
+    <div class="phase-header-right">
+      <div class="mini-ring-wrap">
+        <svg width="52" height="52" viewBox="0 0 52 52">
+          <circle class="mini-ring-bg" cx="26" cy="26" r="20.5"></circle>
+          <circle class="mini-ring-fill" id="ring-4" cx="26" cy="26" r="20.5" style="stroke:var(--p4);stroke-dasharray:128.8;stroke-dashoffset:128.8"></circle>
+        </svg>
+        <div class="mini-ring-text" id="pct-4" style="color:var(--p4)">0%</div>
+      </div>
+      <div class="caret">▾</div>
+    </div>
+  </div>
+  <div class="phase-body">
+    <div class="topics-col" style="--phase-clr: var(--p4)">
+      <div class="col-heading">Topics to Master</div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t4-1" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t4-1">Transformer Architecture</label>
+          <div class="topic-sub">Self-attention, multi-head attention, positional encoding</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t4-2" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t4-2">Tokenization & Embeddings</label>
+          <div class="topic-sub">BPE, vocabulary, token IDs, word/sentence embeddings</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t4-3" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t4-3">HuggingFace Transformers</label>
+          <div class="topic-sub">Pipeline API, AutoModel, datasets, training with Trainer</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t4-4" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t4-4">Prompt Engineering</label>
+          <div class="topic-sub">Zero-shot, few-shot, chain-of-thought, system prompts</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t4-5" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t4-5">Fine-tuning LLMs</label>
+          <div class="topic-sub">LoRA, QLoRA, PEFT, instruction tuning, RLHF concepts</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t4-6" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t4-6">Working with LLM APIs</label>
+          <div class="topic-sub">OpenAI, Anthropic, function calling, structured outputs</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="resources-col">
+        <div class="col-heading">Resources</div>
+        <a class="resource-item" href="https://www.youtube.com/watch?v=kCc8FmEb1nY" target="_blank">
+          <div class="res-icon" style="background:rgba(232,70,142,0.12)">🔥</div>
+          <div class="res-body">
+            <div class="res-name">Karpathy – Let's build GPT</div>
+            <div class="res-type">VIDEO · Build a transformer from zero</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://huggingface.co/learn/nlp-course" target="_blank">
+          <div class="res-icon" style="background:rgba(232,70,142,0.12)">🤗</div>
+          <div class="res-body">
+            <div class="res-name">HuggingFace NLP Course</div>
+            <div class="res-type">FREE COURSE · Practical transformers</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank">
+          <div class="res-icon" style="background:rgba(232,70,142,0.12)">📖</div>
+          <div class="res-body">
+            <div class="res-name">Anthropic Prompt Engineering Guide</div>
+            <div class="res-type">DOCS · Best prompting practices</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://github.com/rasbt/LLMs-from-scratch" target="_blank">
+          <div class="res-icon" style="background:rgba(232,70,142,0.12)">📗</div>
+          <div class="res-body">
+            <div class="res-name">LLMs from Scratch – Raschka</div>
+            <div class="res-type">BOOK/GITHUB · Deep, code-first</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-col" style="--phase-clr: var(--p4)">
+        <div class="col-heading">Apply It</div>
+        <div class="project-card" id="proj-card-4">
+          <div class="proj-topbar">
+            <span class="proj-emoji">✍️</span>
+            <div class="proj-title-wrap">
+              <div class="proj-title">Fine-tune a Small LLM</div>
+              <div class="proj-tags">
+                <span class="proj-tag">qlora</span>
+                <span class="proj-tag">huggingface</span>
+                <span class="proj-tag">transformers</span>
+                <span class="proj-tag">colab</span>
+              </div>
+            </div>
+            <button class="proj-done-btn" id="proj-btn-4" onclick="toggleProject(4)">Mark Built</button>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Fine-tune Mistral-7B or Llama-3 on a domain-specific dataset using QLoRA on free Colab GPUs. Evaluate response quality before and after training with real test prompts.</p>
+            <div>
+              <div class="proj-milestones-label">Milestones</div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m4-1" onchange="saveProgress()"><label class="milestone-text" for="m4-1">Evaluate base model on 10 test prompts before training</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m4-2" onchange="saveProgress()"><label class="milestone-text" for="m4-2">Prepare & format your domain-specific dataset</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m4-3" onchange="saveProgress()"><label class="milestone-text" for="m4-3">Fine-tune with QLoRA, monitor training loss curve</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m4-4" onchange="saveProgress()"><label class="milestone-text" for="m4-4">Compare before/after responses on same prompts</label></div>
+            </div>
+            <a class="proj-starter" href="https://github.com/brevdev/notebooks/blob/main/mistral-finetune-own-data.ipynb" target="_blank">
+              <span class="proj-starter-icon">📓</span>
+              <div class="proj-starter-text">
+                <div class="proj-starter-label">Starter Notebook</div>
+                <div class="proj-starter-name">Mistral Fine-tune on Custom Data (Brev)</div>
+              </div>
+              <span class="proj-starter-arrow">→</span>
+            </a>
+            <div class="proj-callout proj-callout-portfolio">
+              <div class="callout-heading">💼 Portfolio tip</div>
+              <div class="callout-text">Show before/after prompt comparisons in your README. Concrete examples of improvement are far more convincing than just saying "I fine-tuned a model".</div>
+            </div>
+            <div class="proj-callout proj-callout-stretch">
+              <div class="callout-heading">⚡ Stretch goal</div>
+              <div class="callout-text">Push the fine-tuned adapter to Hugging Face Hub and share the model card publicly. A published model is instant credibility.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

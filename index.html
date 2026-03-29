@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Engineering Pathway</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <div class="header-brand">
+      <div class="brand-mark">AI</div>
+      <div class="brand-text">
+        <h1>AI <span>Engineering</span> Pathway</h1>
+        <div class="brand-sub">Study roadmap · Track your progress</div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="header-stat">
+        <div class="header-stat-val" id="total-done">0</div>
+        <div class="header-stat-label">Completed</div>
+      </div>
+      <div class="header-divider"></div>
+      <div class="header-stat">
+        <div class="header-stat-val" id="total-topics">0</div>
+        <div class="header-stat-label">Total Topics</div>
+      </div>
+      <div class="header-divider"></div>
+      <div class="header-stat">
+        <div class="header-stat-val" id="phases-done">0</div>
+        <div class="header-stat-label">Phases Done</div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="overall-ring-wrap">
+        <svg width="52" height="52" viewBox="0 0 52 52" role="img" aria-label="Overall progress ring">
+          <circle class="ring-bg" cx="26" cy="26" r="21"></circle>
+          <circle class="ring-fill" id="overall-ring" cx="26" cy="26" r="21"></circle>
+        </svg>
+        <div class="ring-label" id="overall-pct" aria-live="polite" aria-label="Overall completion percentage">0%</div>
+      </div>
+      <button class="reset-btn" onclick="resetAll()">Reset</button>
+    </div>
+  </header>
+
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside aria-label="Phase navigation and progress">
+    <div class="sidebar-title">Phases</div>
+
+    <a class="phase-nav-item" data-target="phase-1" style="--phase-color: var(--p1)" onclick="scrollToPhase(event,'phase-1')">
+      <div class="nav-num" style="background:rgba(0,200,200,0.12);color:var(--p1)">01</div>
+      <div class="nav-info">
+        <div class="nav-name">Foundations</div>
+        <div class="nav-bar"><div class="nav-bar-fill" id="nav-bar-1" style="background:var(--p1);width:0%"></div></div>
+      </div>
+      <div class="nav-pct" id="nav-pct-1">0%</div>
+    </a>
+
+    <a class="phase-nav-item" data-target="phase-2" style="--phase-color: var(--p2)" onclick="scrollToPhase(event,'phase-2')">
+      <div class="nav-num" style="background:rgba(124,111,255,0.12);color:var(--p2)">02</div>
+      <div class="nav-info">
+        <div class="nav-name">Classical ML</div>
+        <div class="nav-bar"><div class="nav-bar-fill" id="nav-bar-2" style="background:var(--p2);width:0%"></div></div>
+      </div>
+      <div class="nav-pct" id="nav-pct-2">0%</div>
+    </a>
+
+    <a class="phase-nav-item" data-target="phase-3" style="--phase-color: var(--p3)" onclick="scrollToPhase(event,'phase-3')">
+      <div class="nav-num" style="background:rgba(245,158,11,0.12);color:var(--p3)">03</div>
+      <div class="nav-info">
+        <div class="nav-name">Deep Learning</div>
+        <div class="nav-bar"><div class="nav-bar-fill" id="nav-bar-3" style="background:var(--p3);width:0%"></div></div>
+      </div>
+      <div class="nav-pct" id="nav-pct-3">0%</div>
+    </a>
+
+    <a class="phase-nav-item" data-target="phase-4" style="--phase-color: var(--p4)" onclick="scrollToPhase(event,'phase-4')">
+      <div class="nav-num" style="background:rgba(232,70,142,0.12);color:var(--p4)">04</div>
+      <div class="nav-info">
+        <div class="nav-name">LLMs & GenAI</div>
+        <div class="nav-bar"><div class="nav-bar-fill" id="nav-bar-4" style="background:var(--p4);width:0%"></div></div>
+      </div>
+      <div class="nav-pct" id="nav-pct-4">0%</div>
+    </a>
+
+    <a class="phase-nav-item" data-target="phase-5" style="--phase-color: var(--p5)" onclick="scrollToPhase(event,'phase-5')">
+      <div class="nav-num" style="background:rgba(34,212,160,0.12);color:var(--p5)">05</div>
+      <div class="nav-info">
+        <div class="nav-name">AI Engineering</div>
+        <div class="nav-bar"><div class="nav-bar-fill" id="nav-bar-5" style="background:var(--p5);width:0%"></div></div>
+      </div>
+      <div class="nav-pct" id="nav-pct-5">0%</div>
+    </a>
+
+    <a class="phase-nav-item" data-target="phase-6" style="--phase-color: var(--p6)" onclick="scrollToPhase(event,'phase-6')">
+      <div class="nav-num" style="background:rgba(255,107,53,0.12);color:var(--p6)">06</div>
+      <div class="nav-info">
+        <div class="nav-name">MLOps & Prod</div>
+        <div class="nav-bar"><div class="nav-bar-fill" id="nav-bar-6" style="background:var(--p6);width:0%"></div></div>
+      </div>
+      <div class="nav-pct" id="nav-pct-6">0%</div>
+    </a>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-tip">
+      <div class="tip-heading">💡 How to Use</div>
+      <div class="tip-text">Check off topics as you study them. Progress saves automatically in your browser. Click each phase header to collapse/expand. Follow the order — each phase builds on the last.</div>
+    </div>
+  </aside>
+
+  <!-- ═══ MAIN ═══ -->
+  <main id="phases-root"></main>
+</div>
+</body>
+</html>

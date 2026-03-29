@@ -1,0 +1,156 @@
+<!-- ══ PHASE 2: CLASSICAL ML ══ -->
+<div class="phase-card" id="phase-2">
+  <div class="phase-header" onclick="togglePhase(this)" role="button" tabindex="0" aria-expanded="true" onkeydown="handleHeaderKey(event, this)">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(124,111,255,0.12);color:var(--p2)">02</div>
+      <div class="phase-badge-label">
+        <div class="phase-num-tag">Phase 02 · 6–8 Weeks</div>
+        <div class="phase-name">Classical Machine Learning</div>
+        <div class="phase-chips">
+          <span class="chip chip-time">🤖 Sklearn</span>
+          <span class="chip chip-time">📉 Regression</span>
+          <span class="chip chip-time">🔍 Clustering</span>
+        </div>
+        <div class="phase-desc">Learn the fundamental ML algorithms that power real-world systems. Understand when to use what, and how to evaluate models properly.</div>
+      </div>
+    </div>
+    <div class="phase-header-right">
+      <div class="mini-ring-wrap">
+        <svg width="52" height="52" viewBox="0 0 52 52">
+          <circle class="mini-ring-bg" cx="26" cy="26" r="20.5"></circle>
+          <circle class="mini-ring-fill" id="ring-2" cx="26" cy="26" r="20.5" style="stroke:var(--p2);stroke-dasharray:128.8;stroke-dashoffset:128.8"></circle>
+        </svg>
+        <div class="mini-ring-text" id="pct-2" style="color:var(--p2)">0%</div>
+      </div>
+      <div class="caret">▾</div>
+    </div>
+  </div>
+  <div class="phase-body">
+    <div class="topics-col" style="--phase-clr: var(--p2)">
+      <div class="col-heading">Topics to Master</div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t2-1" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t2-1">Supervised Learning</label>
+          <div class="topic-sub">Linear/logistic regression, decision trees, SVMs, kNN</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t2-2" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t2-2">Ensemble Methods</label>
+          <div class="topic-sub">Random forests, gradient boosting, XGBoost, bagging</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t2-3" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t2-3">Unsupervised Learning</label>
+          <div class="topic-sub">K-means, DBSCAN, PCA, t-SNE dimensionality reduction</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t2-4" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t2-4">Model Evaluation</label>
+          <div class="topic-sub">Cross-validation, confusion matrix, AUC-ROC, precision/recall</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t2-5" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t2-5">Feature Engineering</label>
+          <div class="topic-sub">Encoding, scaling, imputation, feature selection</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t2-6" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t2-6">Bias-Variance Tradeoff</label>
+          <div class="topic-sub">Overfitting, regularization (L1/L2), hyperparameter tuning</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="resources-col">
+        <div class="col-heading">Resources</div>
+        <a class="resource-item" href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank">
+          <div class="res-icon" style="background:rgba(124,111,255,0.12)">🎓</div>
+          <div class="res-body">
+            <div class="res-name">Andrew Ng – ML Specialization</div>
+            <div class="res-type">COURSERA · The gold standard</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://www.kaggle.com/learn" target="_blank">
+          <div class="res-icon" style="background:rgba(124,111,255,0.12)">🏆</div>
+          <div class="res-body">
+            <div class="res-name">Kaggle Learn – ML Micro-courses</div>
+            <div class="res-type">FREE · Hands-on notebooks</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://scikit-learn.org/stable/tutorial/" target="_blank">
+          <div class="res-icon" style="background:rgba(124,111,255,0.12)">📖</div>
+          <div class="res-body">
+            <div class="res-name">Scikit-learn Tutorials</div>
+            <div class="res-type">DOCS · Best API to learn ML</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://course.fast.ai/" target="_blank">
+          <div class="res-icon" style="background:rgba(124,111,255,0.12)">⚡</div>
+          <div class="res-body">
+            <div class="res-name">fast.ai – Practical ML</div>
+            <div class="res-type">FREE COURSE · Top-down approach</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-col" style="--phase-clr: var(--p2)">
+        <div class="col-heading">Apply It</div>
+        <div class="project-card" id="proj-card-2">
+          <div class="proj-topbar">
+            <span class="proj-emoji">💰</span>
+            <div class="proj-title-wrap">
+              <div class="proj-title">End-to-End ML Pipeline</div>
+              <div class="proj-tags">
+                <span class="proj-tag">sklearn</span>
+                <span class="proj-tag">xgboost</span>
+                <span class="proj-tag">feature eng.</span>
+                <span class="proj-tag">fastapi</span>
+              </div>
+            </div>
+            <button class="proj-done-btn" id="proj-btn-2" onclick="toggleProject(2)">Mark Built</button>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Build a customer churn or house price predictor. Load data, engineer features, train and compare multiple models, then serve the best one as a prediction API endpoint.</p>
+            <div>
+              <div class="proj-milestones-label">Milestones</div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m2-1" onchange="saveProgress()"><label class="milestone-text" for="m2-1">Baseline model with default params + cross-validation</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m2-2" onchange="saveProgress()"><label class="milestone-text" for="m2-2">Feature engineering pipeline (encoding, scaling, imputation)</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m2-3" onchange="saveProgress()"><label class="milestone-text" for="m2-3">Compare 3+ models with AUC-ROC / RMSE metrics</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m2-4" onchange="saveProgress()"><label class="milestone-text" for="m2-4">Save best model & expose a FastAPI prediction endpoint</label></div>
+            </div>
+            <a class="proj-starter" href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/code" target="_blank">
+              <span class="proj-starter-icon">🏠</span>
+              <div class="proj-starter-text">
+                <div class="proj-starter-label">Starter Dataset</div>
+                <div class="proj-starter-name">House Prices – Kaggle Competition</div>
+              </div>
+              <span class="proj-starter-arrow">→</span>
+            </a>
+            <div class="proj-callout proj-callout-portfolio">
+              <div class="callout-heading">💼 Portfolio tip</div>
+              <div class="callout-text">Document your feature engineering decisions — what you tried, what worked, and why. That reasoning separates ML engineers from people who just call <code style="font-size:10px;color:#9d8fff">.fit()</code>.</div>
+            </div>
+            <div class="proj-callout proj-callout-stretch">
+              <div class="callout-heading">⚡ Stretch goal</div>
+              <div class="callout-text">Add SHAP values to explain individual predictions. A model that can explain itself is far more production-ready.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

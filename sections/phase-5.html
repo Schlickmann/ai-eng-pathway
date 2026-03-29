@@ -1,0 +1,156 @@
+<!-- ══ PHASE 5: AI ENGINEERING ══ -->
+<div class="phase-card" id="phase-5">
+  <div class="phase-header" onclick="togglePhase(this)" role="button" tabindex="0" aria-expanded="true" onkeydown="handleHeaderKey(event, this)">
+    <div class="phase-header-left">
+      <div class="phase-badge" style="background:rgba(34,212,160,0.12);color:var(--p5)">05</div>
+      <div class="phase-badge-label">
+        <div class="phase-num-tag">Phase 05 · 8–10 Weeks</div>
+        <div class="phase-name">AI Engineering & Agents</div>
+        <div class="phase-chips">
+          <span class="chip chip-time">🔗 LangChain</span>
+          <span class="chip chip-time">🗃️ RAG</span>
+          <span class="chip chip-time">🤖 Agents</span>
+        </div>
+        <div class="phase-desc">Build production-grade AI systems: RAG pipelines, vector search, multi-step agents, and tool-using LLMs. This is where AI engineers live.</div>
+      </div>
+    </div>
+    <div class="phase-header-right">
+      <div class="mini-ring-wrap">
+        <svg width="52" height="52" viewBox="0 0 52 52">
+          <circle class="mini-ring-bg" cx="26" cy="26" r="20.5"></circle>
+          <circle class="mini-ring-fill" id="ring-5" cx="26" cy="26" r="20.5" style="stroke:var(--p5);stroke-dasharray:128.8;stroke-dashoffset:128.8"></circle>
+        </svg>
+        <div class="mini-ring-text" id="pct-5" style="color:var(--p5)">0%</div>
+      </div>
+      <div class="caret">▾</div>
+    </div>
+  </div>
+  <div class="phase-body">
+    <div class="topics-col" style="--phase-clr: var(--p5)">
+      <div class="col-heading">Topics to Master</div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t5-1" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t5-1">RAG Architecture</label>
+          <div class="topic-sub">Chunking, embedding, retrieval, reranking, generation</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t5-2" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t5-2">Vector Databases</label>
+          <div class="topic-sub">Pinecone, Chroma, Weaviate — similarity search, HNSW</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t5-3" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t5-3">LangChain / LlamaIndex</label>
+          <div class="topic-sub">Chains, memory, document loaders, query engines</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t5-4" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t5-4">AI Agents & Tool Use</label>
+          <div class="topic-sub">ReAct pattern, function calling, multi-agent systems</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t5-5" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t5-5">Evaluation of AI Systems</label>
+          <div class="topic-sub">LLM-as-judge, RAGAS, hallucination detection, red-teaming</div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <input type="checkbox" class="topic-cb" id="t5-6" onchange="saveProgress()">
+        <div class="topic-text">
+          <label class="topic-main" for="t5-6">Structured Outputs & APIs</label>
+          <div class="topic-sub">Pydantic, Instructor, JSON mode, schema-constrained gen</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="resources-col">
+        <div class="col-heading">Resources</div>
+        <a class="resource-item" href="https://www.deeplearning.ai/short-courses/" target="_blank">
+          <div class="res-icon" style="background:rgba(34,212,160,0.12)">⚡</div>
+          <div class="res-body">
+            <div class="res-name">DeepLearning.AI Short Courses</div>
+            <div class="res-type">FREE COURSES · LangChain, RAG, Agents</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://python.langchain.com/docs/" target="_blank">
+          <div class="res-icon" style="background:rgba(34,212,160,0.12)">🔗</div>
+          <div class="res-body">
+            <div class="res-name">LangChain Documentation</div>
+            <div class="res-type">DOCS · Comprehensive with examples</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://docs.llamaindex.ai/" target="_blank">
+          <div class="res-icon" style="background:rgba(34,212,160,0.12)">🦙</div>
+          <div class="res-body">
+            <div class="res-name">LlamaIndex Documentation</div>
+            <div class="res-type">DOCS · Best for RAG pipelines</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+        <a class="resource-item" href="https://docs.anthropic.com/" target="_blank">
+          <div class="res-icon" style="background:rgba(34,212,160,0.12)">📖</div>
+          <div class="res-body">
+            <div class="res-name">Anthropic API Documentation</div>
+            <div class="res-type">DOCS · Tool use, agents, Claude</div>
+          </div>
+          <div class="res-arrow">→</div>
+        </a>
+      </div>
+      <div class="project-col" style="--phase-clr: var(--p5)">
+        <div class="col-heading">Apply It</div>
+        <div class="project-card" id="proj-card-5">
+          <div class="proj-topbar">
+            <span class="proj-emoji">🤖</span>
+            <div class="proj-title-wrap">
+              <div class="proj-title">RAG-Powered Knowledge Assistant</div>
+              <div class="proj-tags">
+                <span class="proj-tag">RAG</span>
+                <span class="proj-tag">langchain</span>
+                <span class="proj-tag">chromadb</span>
+                <span class="proj-tag">streamlit</span>
+              </div>
+            </div>
+            <button class="proj-done-btn" id="proj-btn-5" onclick="toggleProject(5)">Mark Built</button>
+          </div>
+          <div class="proj-body">
+            <p class="proj-desc">Build a chatbot that answers questions over your own PDF documents. Chunk, embed, store in a vector DB, retrieve relevant context, then generate grounded answers with an LLM.</p>
+            <div>
+              <div class="proj-milestones-label">Milestones</div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m5-1" onchange="saveProgress()"><label class="milestone-text" for="m5-1">Chunk documents & test retrieval quality manually</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m5-2" onchange="saveProgress()"><label class="milestone-text" for="m5-2">Set up Chroma vector store with OpenAI embeddings</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m5-3" onchange="saveProgress()"><label class="milestone-text" for="m5-3">Build generation chain with context injection</label></div>
+              <div class="milestone-item"><input type="checkbox" class="milestone-cb" id="m5-4" onchange="saveProgress()"><label class="milestone-text" for="m5-4">Add Streamlit chat UI with conversation history</label></div>
+            </div>
+            <a class="proj-starter" href="https://python.langchain.com/docs/tutorials/rag/" target="_blank">
+              <span class="proj-starter-icon">🔗</span>
+              <div class="proj-starter-text">
+                <div class="proj-starter-label">Starter Tutorial</div>
+                <div class="proj-starter-name">LangChain RAG Quickstart</div>
+              </div>
+              <span class="proj-starter-arrow">→</span>
+            </a>
+            <div class="proj-callout proj-callout-portfolio">
+              <div class="callout-heading">💼 Portfolio tip</div>
+              <div class="callout-text">Explain your chunking strategy and why you chose that chunk size and overlap. That's where most RAG systems fail in production — showing you thought about it is a huge signal.</div>
+            </div>
+            <div class="proj-callout proj-callout-stretch">
+              <div class="callout-heading">⚡ Stretch goal</div>
+              <div class="callout-text">Add a re-ranking step with Cohere Rerank or a cross-encoder. Compare answer quality before and after — retrieval quality is the biggest RAG lever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
